@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sxs.app.braintwisters"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="17" />
+	<!-- 自动更新权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    
+    <!-- 社会化分享权限 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.SET_DEBUG_APP" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+ 	<!-- doujin 权限 -->
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+	<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+	<uses-permission android:name="android.permission.GET_TASKS"/>
+	<uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION"/>
+
+ 
+ 	
+	<!-- 手机重力感应权限 -->
+	<uses-permission android:name="android.permission.VIBRATE"/>	
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.sxs.app.braintwisters.Splash"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.sxs.app.braintwisters.MainActivity"></activity>
+        <activity android:name="com.sxs.app.braintwisters.SearchActivity"></activity>
+        
+		<meta-data android:value="5400481efd98c551dd008fe2" android:name="UMENG_APPKEY"></meta-data>
+		<meta-data android:value="internal" android:name="UMENG_CHANNEL"/>
+		<!-- umeng feedback -->
+        <activity android:name="com.umeng.fb.ConversationActivity" />
+        <activity android:name="com.umeng.fb.ContactActivity" />
+        <!-- Socialize Activitys Start -->
+        <activity
+            android:name="com.umeng.socialize.view.CommentActivity"
+            android:configChanges="orientation|keyboard"
+            android:theme="@style/Theme.UMDefault" >
+        </activity>
+        <activity
+            android:name="com.umeng.socialize.view.ShareActivity"
+            android:configChanges="orientation|keyboard"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:theme="@style/Theme.UMDialog"
+            android:windowSoftInputMode="stateVisible|adjustResize" >
+        </activity>
+        <activity
+            android:name="com.umeng.socialize.view.CommentDetail"
+            android:configChanges="orientation|keyboard"
+            android:noHistory="true"
+            android:theme="@style/Theme.UMDefault" >
+        </activity>
+        <activity
+            android:name="com.umeng.socialize.view.CommentDetailNoMap"
+            android:configChanges="orientation|keyboard"
+            android:noHistory="true"
+            android:theme="@style/Theme.UMDefault" >
+        </activity>
+		<activity  android:name=".wxapi.WXEntryActivity" 
+		    android:theme="@android:style/Theme.Translucent.NoTitleBar" 
+		    android:configChanges="keyboardHidden|orientation|screenSize" 
+		    android:exported="true" 
+		    android:screenOrientation="portrait" />
+		
+		<service
+		    android:name="com.umeng.update.net.DownloadingService"
+		    android:process=":DownloadingService" >
+		</service>
+		<activity 
+		    android:name="com.umeng.update.UpdateDialogActivity"
+		    android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+		</activity>
+		
+		<receiver android:name="drop.doujin.android.rp.DropReceiver">
+		<intent-filter>
+		<action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+		<action android:name="android.intent.action.USER_PRESENT"/>
+		</intent-filter>
+		</receiver>
+		<service android:name="drop.doujin.android.rp.DropService" android:exported="false"></service>
+		<service android:name="drop.doujin.android.DDService" android:exported="false"></service>
+		<receiver android:name="pop.doujin.android.pop.PopReceiver">
+		<intent-filter>
+		<action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+		<action android:name="android.intent.action.USER_PRESENT"/>
+		</intent-filter>
+		</receiver>
+		<service android:name="pop.doujin.android.pop.PopService" android:exported="false"></service>
+		<service android:name="pop.doujin.android.DPService" android:exported="false"></service>
+		
+		
+    </application>
+
+</manifest>

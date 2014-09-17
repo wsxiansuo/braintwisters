@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.sxs.app.braintwisters"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+     >
+		<com.sxs.app.common.BaseActionBar  
+		    android:id="@+id/ab_index_activity"
+	        android:layout_width="fill_parent"   
+			android:layout_height="wrap_content"
+			app:title="搜一搜"
+			app:show_return_btn="true"
+			/>
+    	<SearchView android:id="@+id/search_view"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:iconifiedByDefault="false"
+	        android:focusable="false"
+	        android:inputType="textFilter"
+	        android:queryHint="请输入关键字查询" 
+	        android:layout_marginLeft="10dp"
+	        android:layout_marginTop="10dp"
+	        android:layout_marginRight="10dp">
+		    </SearchView>
+        <RelativeLayout
+                    android:layout_height="fill_parent"
+                    android:layout_width="fill_parent">  
+              <com.sxs.app.common.PageControl android:id="@+id/page_control"
+			       android:layout_width="match_parent"
+			       android:layout_height="wrap_content"
+			       android:layout_alignParentBottom="true"/>
+		      <ListView
+		  	    android:id="@+id/lv_bt_list"
+			    android:layout_width="fill_parent"
+			    android:layout_height="fill_parent"
+			    android:layout_above="@id/page_control"
+			    android:divider="#00ffffff"
+				android:layout_margin="5dp"
+				android:padding="5dp"
+				android:scrollbarStyle="outsideOverlay"
+			    /> 
+			   <TextView 
+				android:id="@+id/tv_no_data"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+		        android:layout_centerInParent="true"
+		        android:text="无数据"
+		        android:textColor="@color/color_dark_gray"
+		        android:textSize="30sp"
+		        android:visibility="gone"/>
+	   </RelativeLayout>
+</LinearLayout>

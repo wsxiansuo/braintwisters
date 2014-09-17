@@ -1,0 +1,27 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    xmlns:app="http://schemas.android.com/apk/res/com.sxs.app.braintwisters"
+    android:orientation="vertical"
+    android:padding="0dp"
+    android:layout_margin="0dp"
+    android:background="#ffffffff">
+	<!-- 用户协议  -->
+	<com.sxs.app.common.BaseActionBar  
+		    android:id="@+id/ab_detail_activity"
+	        android:layout_width="fill_parent"   
+			android:layout_height="wrap_content"
+			app:title="使用说明"
+			app:show_return_btn="false"
+			app:show_right_btn="true"
+			app:right_btn_selector="@drawable/ic_close"/>
+
+	      <WebView
+	       android:id="@+id/wv_shuoming_webview"
+	       android:layout_width="match_parent"
+	       android:layout_height="match_parent" 
+	       android:background="@color/color_white"
+	       />
+</LinearLayout>

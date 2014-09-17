@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.sxs.app.braintwisters"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+     >
+		<com.sxs.app.common.BaseActionBar  
+		    android:id="@+id/ab_index_activity"
+	        android:layout_width="fill_parent"   
+			android:layout_height="wrap_content"
+			app:title="脑筋急转弯"
+			app:show_return_btn="false"
+			app:show_left_btn="true"
+			app:show_right_btn="true"/>
+    
+        <RelativeLayout android:id="@+id/topLayout"
+                    android:layout_height="fill_parent"
+                    android:layout_width="fill_parent">
+              <com.sxs.app.common.PageControl android:id="@+id/page_control"
+			       android:layout_width="match_parent"
+			       android:layout_height="wrap_content"
+			       android:layout_alignParentBottom="true"/>
+		      <ListView
+		  	    android:id="@+id/lv_bt_list"
+			    android:layout_width="fill_parent"
+			    android:layout_height="fill_parent"
+			    android:layout_above="@id/page_control"
+			    android:divider="#00ffffff"
+				android:layout_margin="5dp"
+				android:padding="5dp"
+				android:scrollbarStyle="outsideOverlay"
+			    /> 
+			   
+	   </RelativeLayout>
+</LinearLayout>

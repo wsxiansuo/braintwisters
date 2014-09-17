@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" 
+    android:background="#f1dae7">
+    <Button android:id="@+id/page_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/page_left_btn"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="2dp"
+        android:layout_centerVertical="true"/>
+	<Button android:id="@+id/page_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/page_right_btn"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="2dp"
+        android:layout_centerVertical="true"/>
+
+	<SeekBar
+	    android:id="@+id/page_seekbar"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+		android:layout_toLeftOf="@id/page_right"
+		android:layout_toRightOf="@id/page_left"
+		android:layout_margin="5dp"
+		style="?android:attr/progressBarStyleHorizontal"  
+        android:progressDrawable="@drawable/seekbar_style"     
+        android:thumb="@drawable/thumb"  
+	    />
+	<TextView android:id="@+id/page_text"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_toLeftOf="@id/page_right"
+		android:layout_toRightOf="@id/page_left"
+		android:layout_below="@id/page_seekbar"
+		android:gravity="center"
+		android:layout_marginBottom="7dp"
+		android:textColor="#5057e1"
+		android:textSize="11sp"/>
+</RelativeLayout>

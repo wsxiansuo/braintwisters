@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">脑筋急转弯集锦</string>
+    <string name="action_settings">设置</string>
+    <string name="hello_world">Hello world!</string>
+	<string name="about_text1">"        脑筋急转弯应用只是为了满足广大脑筋急转弯爱好者需要而搜集整理的，作品版权归原作者和网站所有相关内容为收集整理的各种资料所得，本软件不保证其科学性以及严谨性，仅供参考之用！如有侵权行为，请联系作者删除。"
+	</string>
+	<string name="about_text2">"        作者本人是一位诗词爱好者，特别喜爱河北卫视推出的文化类大型季播节目《中华好诗词》之后。为了方便众多诗词爱好者，弘扬中国传统诗词文化，特花时间搜集众多诗词以供大家参考学习之用。"</string>
+	<string name="about_text3">"        脑筋急转弯能开动脑筋、开发智力、增添情趣，实在是 大众聚餐、公共娱乐、居家旅行之必备良药也~~ "</string>
+	<string name="about_text4">"        如果你在使用软件的过程中，有任何意见或者建议，欢迎发送邮件到以下邮箱地址，你宝贵的意见对我们持续改进软件质量有很的大帮助。邮箱:2861178868@qq.com"
+	</string>
+	<string name="categ_offline_list">离线列表</string>
+    <string name="categ_local_video_list">本地视频</string>
+    <string name="cate_favrouite_list">我的收藏</string>
+    <string name="cate_playing_history">播放记录</string>
+    <string name="cate_leida">雷达</string>
+    <string name="hot_viedo">热播</string>
+</resources>

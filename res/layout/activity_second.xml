@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.sxs.app.braintwisters"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+     >
+
+    <RelativeLayout android:id="@+id/topLayout"
+                    android:layout_height="wrap_content"
+                    android:layout_width="fill_parent">
+		<com.sxs.app.common.BaseActionBar  
+	        android:layout_width="fill_parent"   
+			android:layout_height="wrap_content"
+			app:title="猜一猜"
+			app:show_return_btn="false"/>
+    </RelativeLayout>
+    <ScrollView android:id="@+id/sv_question_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+   	<LinearLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_horizontal">
+        <RelativeLayout android:id="@+id/rl_top_btn_group"
+            android:layout_width="match_parent"
+	    	    android:layout_height="match_parent"
+	    	    >
+	    	    <Button android:id="@+id/btn_new_timu"
+	    	            android:text="重新选题"
+	    	            style="@style/btn_style"
+	    	            android:layout_alignParentLeft="true"/>
+	    	    <Button android:id="@+id/btn_look_result"
+	    	            android:text="查看答案"
+	    	            style="@style/btn_style"
+	    	            android:layout_alignParentRight="true"/>
+	    	    <TextView android:id="@+id/tv_every_time"
+	    	        android:layout_width="wrap_content"
+	    	        android:layout_height="wrap_content"
+	    	        android:textSize="24sp"
+	    	        android:textStyle="bold"
+	    	        android:layout_centerInParent="true"/>
+	    	</RelativeLayout>
+			<TextView android:id="@+id/tv_xiangdaole"
+	      	    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:textSize="22sp"
+			    android:text="你猜对了吗？"
+			    android:visibility="gone"/>
+	      	<TextView android:id="@+id/tv_title"
+	      	    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:textSize="18sp"
+			    android:text="第1/10题"
+			    android:layout_marginTop="10dp"/>
+	        <TextView android:id="@+id/second_question_tv"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:textSize="20sp"
+		        android:textColor="#000000"
+		        android:lineSpacingExtra="3dp"
+		        android:lineSpacingMultiplier="1.2"
+		        android:background="@drawable/shape_question_bg"
+		        android:padding="20dp"
+		        android:layout_marginTop="20dp"
+	        />
+	    	<TextView android:id="@+id/second_answer_tv"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:textSize="17sp"
+		        android:textColor="#6760cb"
+		        android:padding="20dp"
+		        android:layout_marginTop="20dp"
+		        android:background="@drawable/shape_answer_bg"
+		        android:visibility="gone"
+	        />
+	    	<RelativeLayout android:layout_width="match_parent"
+	    	    android:layout_height="match_parent"
+	    	    android:layout_marginTop="20dp"
+	    	    android:layout_marginBottom="50dp">
+	    	    <Button android:id="@+id/btn_stop"
+	    	            android:text="分享朋友"
+	    	            style="@style/btn_style"
+	    	            android:layout_alignParentLeft="true"/>
+	    	    <Button android:id="@+id/btn_next"
+	    	            android:text="下一题目"
+	    	            style="@style/btn_style"
+	    	            android:layout_alignParentRight="true"/>
+	    	    <TextView android:id="@+id/tv_total_time"
+	    	        android:layout_width="wrap_content"
+	    	        android:layout_height="wrap_content"
+	    	        android:textSize="24sp"
+	    	        android:textStyle="bold"
+	    	        android:layout_centerInParent="true"/>
+	    	    <ImageView android:id="@+id/iv_shoucang"
+    	    		android:src="@drawable/star_empty"
+			        android:layout_width="40dp"
+			        android:layout_height="40dp"
+			        android:layout_centerInParent="true"
+			        android:visibility="gone"
+			        />
+	    	</RelativeLayout>
+    	</LinearLayout>
+    </ScrollView>
+    <LinearLayout android:id="@+id/rl_test_score"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:visibility="gone"
+        android:background="@drawable/shape_result_bg"
+        android:padding="20dp"
+        >
+        <TextView android:id="@+id/tv_result_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:text=""
+            android:layout_marginTop="15dp"
+            android:textColor="#9437a2"
+            />
+        <TextView android:id="@+id/tv_result_short_time"
+            style="@style/text_style"
+            />
+        <TextView android:id="@+id/tv_result_long_time"
+            style="@style/text_style"
+            />
+        <TextView android:id="@+id/tv_result_total_time"
+            style="@style/text_style"
+            />
+		<Button android:id="@+id/btn_test_again"
+	    	            android:text="重新测试"
+	    	            style="@style/btn_style"
+	    	            android:layout_marginTop="35dp"
+	    	            android:layout_marginBottom="15dp"
+	    	            />
+    </LinearLayout>
+</LinearLayout>

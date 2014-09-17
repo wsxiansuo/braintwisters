@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.sxs.app.braintwisters"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+     >
+
+    <RelativeLayout android:id="@+id/topLayout"
+                    android:layout_height="wrap_content"
+                    android:layout_width="fill_parent">
+		<com.sxs.app.common.BaseActionBar  
+		    android:id="@+id/ab_three_activity"
+	        android:layout_width="fill_parent"   
+			android:layout_height="wrap_content"
+			app:title="摇一摇"
+			app:show_return_btn="false"/>
+    </RelativeLayout>
+    <ScrollView android:layout_width="match_parent"
+        android:layout_height="match_parent">
+   		<LinearLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_horizontal">
+			<TextView android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:textSize="22sp"
+			    android:text="亲，抓好手机了吗？"/>
+	      	<TextView android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:textSize="22sp"
+			    android:text="让我们摇起来吧！"
+			    android:layout_marginTop="15dp"/>
+	        <TextView android:id="@+id/three_question_tv"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:textSize="20sp"
+		        android:textColor="#000000"
+		        android:lineSpacingExtra="3dp"
+		        android:lineSpacingMultiplier="1.2"
+		        android:background="@drawable/shape_question_bg"
+		        android:padding="20dp"
+		        android:layout_marginTop="20dp"
+	        />
+	    	<TextView android:id="@+id/three_answer_tv"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:textSize="17sp"
+		        android:textColor="#6760cb"
+		        android:padding="20dp"
+		        android:layout_marginTop="20dp"
+		        android:background="@drawable/shape_answer_bg"
+		        android:visibility="gone"
+	        />
+	    	<RelativeLayout android:layout_width="match_parent"
+	    	    android:layout_height="match_parent"
+	    	    android:layout_marginTop="20dp">
+	    	    <Button android:id="@+id/btn_share"
+	    	            android:text="分享朋友"
+	    	            style="@style/btn_style"
+	    	            android:layout_alignParentLeft="true"/>
+	    	    <Button android:id="@+id/btn_look_result"
+	    	            android:text="查看答案"
+	    	            style="@style/btn_style"
+	    	            android:layout_alignParentRight="true"/>
+	    	    <ImageView android:id="@+id/iv_shoucang"
+    	    		android:src="@drawable/star_empty"
+			        android:layout_width="40dp"
+			        android:layout_height="40dp"
+			        android:layout_centerInParent="true"
+			        />
+	    	</RelativeLayout>
+    	</LinearLayout>
+    </ScrollView>
+</LinearLayout>
